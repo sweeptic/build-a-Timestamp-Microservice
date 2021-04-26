@@ -23,10 +23,6 @@ exports.getDate = (req, res, next) => {
     isValidUnixTimeStamp = true;
   }
 
-  // true || true - true - false
-  // true || false - true - false
-  // false || true - true - false
-  // false || false - false - true
   if (!(isValidUtcDate || isValidUnixTimeStamp)) {
     res.json({ error: 'Invalid Date' });
   } else {
